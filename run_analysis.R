@@ -64,9 +64,8 @@ XTrainTestDataLite <- cbind(subject,activity,XTrainTestDataLite)
 
 # Question 4
 # Appropriately labels the data set with descriptive variable names  
-# In this step, the mean and
-# standard deviation feature names are cleaned of hyphens and parentheses, and then attached as
-# column names to the data set.
+# Clean up the variable names with mean and standard deviations (hyphens and parentheses
+# excised). Reattach to the data set.
 
 # Grab the un"scrubbed" names off featureNames
 scrubbedFeatures <- (cbind(featureNames,meanORsd)[meanORsd==TRUE,])$V2
@@ -76,7 +75,8 @@ scrubbedFeatures <- sapply(scrubbedFeatures,function(s){ tolower(gsub("(\\(|\\)|
 names(XTrainTestDataLite)[3:ncol(XTrainTestDataLite)] <- scrubbedFeatures
 
 # Output "XTrainTestDataLite" to text file
-write.table(XTrainTestDataLite, "XTrainTestDataLite.txt", sep="\t")
+write.table(XTrainTestDataLite, "XTrainTestDataLite.txt", sep="\t", row.names=F)
+
 
 
 
@@ -99,4 +99,4 @@ XTrainTestDataLiteMelt <- melt(XTrainTestDataLite,id.vars=c("subject","activity"
 XTrainTestDataLiteTidy <- dcast(XTrainTestDataLiteMelt, subject + activity ~ variable, mean)
 
 # write the dataset to a file
-write.table(XTrainTestDataLiteTidy, "XTrainTestDataLiteTidy.txt", sep="\t")
+write.table(XTrainTestDataLiteTidy, "XTrainTestDataLiteTidy.txt", sep="\t", row.names=F)
