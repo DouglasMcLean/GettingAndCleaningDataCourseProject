@@ -1,0 +1,104 @@
+Codebook (Getting and Cleaning Data course Project)
+
+Data is taken from the URL: 
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+
+The codebook for the original data is described in some detail in the above archive
+in the file "features_info.txt".
+
+This codebook describes the variable names in the files:
+
+"XTrainTestDataLite.txt"
+"XTrainTestDataLiteTidy.txt"
+
+The second file being an aggregate derived from the first with identical variable names.
+These are now described.
+
+
+Variable Names
+
+The table below describes the variables produced by the run_analysis.R script used
+to create the two text files above.
+
+subject: 
+A dummy variable indexing the subject.
+An integer from 1 to 30
+
+activity:
+A factor variable in 6 levels:
+WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+
+For the remaining variables described below the reader is referred to the 
+"features_info.txt" file discussed above. For information, suffixes "mean" and "std"
+refer to averaged and standard deviations measures of the associated variables.
+Prefixes "t" are time-domain, "f" are frequency domain
+Suffixes "xyz" indicate co-ordinate axes.
+
+For completeness, these variables are real-valued continiuous variables and are:  
+
+tbodyaccmeanx	
+tbodyaccmeany	
+tbodyaccmeanz	
+tbodyaccstdx	
+tbodyaccstdy	
+tbodyaccstdz	
+tgravityaccmeanx	
+tgravityaccmeany	
+tgravityaccmeanz	
+tgravityaccstdx	
+tgravityaccstdy	
+tgravityaccstdz	
+tbodyaccjerkmeanx	
+tbodyaccjerkmeany	
+tbodyaccjerkmeanz	
+tbodyaccjerkstdx	
+tbodyaccjerkstdy	
+tbodyaccjerkstdz	
+tbodygyromeanx	
+tbodygyromeany	
+tbodygyromeanz	
+tbodygyrostdx	
+tbodygyrostdy	
+tbodygyrostdz	
+tbodygyrojerkmeanx	
+tbodygyrojerkmeany	
+tbodygyrojerkmeanz	
+tbodygyrojerkstdx	
+tbodygyrojerkstdy	
+tbodygyrojerkstdz	
+tbodyaccmagmean	
+tbodyaccmagstd	
+tgravityaccmagmean	
+tgravityaccmagstd	
+tbodyaccjerkmagmean	
+tbodyaccjerkmagstd	
+tbodygyromagmean	
+tbodygyromagstd	
+tbodygyrojerkmagmean	
+tbodygyrojerkmagstd	
+fbodyaccmeanx	
+fbodyaccmeany	
+fbodyaccmeanz	
+fbodyaccstdx	
+fbodyaccstdy	
+fbodyaccstdz	
+fbodyaccjerkmeanx	
+fbodyaccjerkmeany	
+fbodyaccjerkmeanz	
+fbodyaccjerkstdx	
+fbodyaccjerkstdy	
+fbodyaccjerkstdz	
+fbodygyromeanx	
+fbodygyromeany	
+fbodygyromeanz	
+fbodygyrostdx	
+fbodygyrostdy	
+fbodygyrostdz	
+fbodyaccmagmean	
+fbodyaccmagstd	
+fbodybodyaccjerkmagmean	
+fbodybodyaccjerkmagstd	
+fbodybodygyromagmean	
+fbodybodygyromagstd	
+fbodybodygyrojerkmagmean	
+fbodybodygyrojerkmagstd
